@@ -1,4 +1,4 @@
-'use client'
+// 'use client'
 // import React from 'react'
 // import { Card, Progress } from 'antd';
 // const Login = () => {
@@ -59,7 +59,7 @@ import {
 import { Space, Tabs, message, theme } from 'antd';
 import { useState } from 'react';
 
- LoginType = 'phone' | 'account';
+LoginType = 'phone' | 'account';
 
 export default () => {
     const { token } = theme.useToken();
