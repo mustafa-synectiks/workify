@@ -44,7 +44,7 @@ const Cards = ({ title, progressPercentage, numberOfProjects, totalTask, imageUr
   };
   return (
     <>
-      <Card className='w-full ml-3'
+      <Card bordered={false} className='w-full ml-3'
       // cover={imageUrl && <img alt={title} src={imageUrl} />}
       // actions={[
       //   isCompleted ? (

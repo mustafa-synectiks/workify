@@ -5,13 +5,10 @@ import Cards from '@/Cards/Cards'
 
 const Dashboard = () => {
   return (
-    <>
-    {/* navbar */}
+    <> 
     <Navbar/>
     <Sidebar/>
     <Cards/>
-    {/* sidebar */}
-    {/* main layout */}
     </>
   )
 }

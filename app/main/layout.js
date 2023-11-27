@@ -11,15 +11,17 @@ import {
   AccountBookFilled,
   BellFilled,
   ProjectFilled,
-  RightOutlined,
   IdcardFilled,
-  LeftOutlined,
   SignalFilled,
   SearchOutlined,
   VideoCameraOutlined,
+  RightOutlined,
+  LeftOutlined,
+  QuestionCircleOutlined,
+  BellOutlined
 } from '@ant-design/icons';
 import TabsComponent from '@/Components/Tabs/Tabs';
-import { Layout, Menu, Button, theme, Card } from 'antd';
+import { Layout, Menu, Button, theme, Card, Avatar, Badge, Input } from 'antd';
 import CircularProgress from '@/Components/Charts/Circular';
 import axios from 'axios';
 import Cards from '@/Components/Cards/Cards'
@@ -190,14 +192,77 @@ const mainLayout = () => {
   return (
     <>
       <Layout theme="dark">
-        <Header>
+        <Header className='flex flex-row items-center justify-between'>
           <h5 className='uppercase text-white'>Synectiks</h5>
-          <Button icon={<SearchOutlined />}>Search</Button>
+          {/* <Button theme="light" className='w-1/3' icon={<SearchOutlined />}>Search</Button> */}
+          <Input className='w-1/3' placeholder="search" suffix={<SearchOutlined />} />
+          <div className="right-menu-wrapper">
+            <div className="flex flex-row items-center justify-between gap-9">
+              <QuestionCircleOutlined size={56} className='w-5' style={{ color: "#fff" }} />
+              <Badge count={1} style={{ fontSize: '12px', width: '20px', height: '20px', lineHeight: '20px' }}>
+                <BellOutlined size={64} style={{ color: "#fff" }} />
+              </Badge>
+              <Avatar size={56} icon={<UserOutlined />} />
+            </div>
+          </div>
         </Header>
       </Layout>
-      <Layout className='relative'>
+      <Layout className='flex flex-row '>
+        <Layout className='static'>
+          <Sider trigger={null} collapsible collapsed={collapsed} theme="light" className=''>
 
-        <Layout>
+            <div className="demo-logo-vertical" />
+            <Menu
+              theme="light"
+              mode="inline"
+              defaultSelectedKeys={['1']}
+              items={[
+                {
+                  key: '1',
+                  icon: <ProjectFilled />,
+                  label: 'Dashboard',
+                },
+                {
+                  key: '2',
+                  icon: <VideoCameraOutlined />,
+                  label: 'Projects',
+                },
+                {
+                  key: '3',
+                  icon: <SignalFilled />,
+                  label: 'Team',
+                },
+                {
+                  key: '4',
+                  icon: <IdcardFilled />,
+                  label: 'Reports',
+                },
+                {
+                  key: '5',
+                  icon: <AccountBookFilled />,
+                  label: 'Preference',
+                },
+                {
+                  key: '6',
+                  icon: <BellFilled />,
+                  label: 'Notifications',
+                },
+              ]}
+            />
+            <Button theme="dark"
+              className='bg-white absolute top-5 -right-3 z-20'
+              type="text"
+              icon={collapsed ? < RightOutlined className='' /> : <LeftOutlined />}
+              onClick={() => setCollapsed(!collapsed)}
+              style={{
+                fontSize: '16px',
+                width: 16,
+                height: 64,
+                clipPath: `polygon(0 0, 100% 21%, 99% 80%, 0% 100%)`
+              }}
+            />
+          </Sider>
+
           <Content
             className='px-2 py-3'
           >
@@ -209,16 +274,21 @@ const mainLayout = () => {
               <Cards {...cardData4} />
             </div>
 
-            <div className="flex flex-col w-full">
-              <h2>Bar Chart</h2>
-              {/* <BarChart data={barChartData} /> */}
-              <BarChart data={barChartData} />
+            <div className="flex flex-col space-y-6">
+              <div className="bg-white my-6">
+                <div className="flex flex-col">
+                  <h2>Bar Chart</h2>
+                  {/* <BarChart data={barChartData} /> */}
+                  <BarChart data={barChartData} />
+                </div>
+              </div>
             </div>
-            <div className="flex flex-col w-full">
-              <h2>Stacked Bar Chart</h2>
-              <StackedBarChart data={stackedBarChartData} />
-            </div>
-            <CircularProgress />
+            <div className="bg-white my-6">
+              <div className="flex flex-col">
+                <h2>Stacked Bar Chart</h2>
+                <StackedBarChart data={stackedBarChartData} />
+              </div></div>
+            {/* <CircularProgress /> */}
             <div>
               <Resources />
             </div>
