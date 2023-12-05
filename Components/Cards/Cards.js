@@ -25,7 +25,7 @@
 
 // components/ReusableCard.js
 
-import { Card, Progress } from 'antd';
+import { Card, Progress,Row } from 'antd';
 import {
   CaretDownFilled,
   CaretUpFilled,
@@ -44,27 +44,28 @@ const Cards = ({ title, progressPercentage, numberOfProjects, totalTask, imageUr
   };
   return (
     <>
-      <Card bordered={false} className='w-full ml-3'
-      // cover={imageUrl && <img alt={title} src={imageUrl} />}
-      // actions={[
-      //   isCompleted ? (
-      //     <CheckCircleOutlined
-      //       key="completed" style={{ color: '#faad14' }} />
-      //   ) : (
-      //     <CheckCircleFilled key="in-progress" style={{ color: '#52c41a' }} />
-      //   ),
-      // ]}
-      >
-        {/* <Card.Meta title={title} description={progressPercentage} /> */}
-        <h3 className="text-2xl">{`${title}`}</h3>
-        <h2 className="text-3xl">{`${progressPercentage}`}</h2>
-        <div className="project-details">
-          <p>{`${numberOfProjects} projects`}</p>
-          <Progress percent={progress} status={isCompleted ? 'success' : 'active'} />
-          <p>{`Total Task ${totalTask}`}</p>
-        </div>
-      </Card>
-      {/* <div className="card w-full">
+
+        <Card bordered={false} className='w-full ml-3'
+        // cover={imageUrl && <img alt={title} src={imageUrl} />}
+        // actions={[
+        //   isCompleted ? (
+        //     <CheckCircleOutlined
+        //       key="completed" style={{ color: '#faad14' }} />
+        //   ) : (
+        //     <CheckCircleFilled key="in-progress" style={{ color: '#52c41a' }} />
+        //   ),
+        // ]}
+        >
+          {/* <Card.Meta title={title} description={progressPercentage} /> */}
+          <h3 className="text-2xl">{`${title}`}</h3>
+          <h2 className="text-3xl">{`${progressPercentage}`}</h2>
+          <div className="project-details">
+            <p>{`${numberOfProjects} projects`}</p>
+            <Progress percent={progress} status={isCompleted ? 'success' : 'active'} />
+            <p>{`Total Task ${totalTask}`}</p>
+          </div>
+        </Card>
+        {/* <div className="card w-full">
       {/* {imageUrl && <img src={imageUrl} alt={title} className="card-image" />
       <div className="card-content p-4 ">
         <div className="flex flex-row items-center justify-between">
@@ -91,7 +92,7 @@ const Cards = ({ title, progressPercentage, numberOfProjects, totalTask, imageUr
           <p>{`${totalTask} Tasks`}</p>
         </div>
       </div>
-    </div> */}
+    </div> */} 
     </>
   );
 };

@@ -215,7 +215,7 @@ const mainLayout = () => {
               <BarChart data={barChartData} />
             </div>
             <div className="flex flex-col w-full">
-              <h2>Stacked Bar Chart</h2>
+              <h2>Stacked Bar  </h2>
               <StackedBarChart data={stackedBarChartData} />
             </div>
             <CircularProgress />

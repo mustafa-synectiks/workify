@@ -7,7 +7,7 @@ const { TabPane } = Tabs;
 
 const TabsComponent = ({ tabData }) => {
     return (
-        <Tabs defaultActiveKey="1">
+        <Tabs tabPosition="right" type='card'defaultActiveKey="1">
             {tabData.map((tab, index) => (
                 <TabPane tab={tab.title} key={index + 1}>
                     {tab.content}

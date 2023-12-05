@@ -3,4 +3,35 @@
 @tailwind utilities;
 
 
+svg.recharts-surface{
+    width: 100% !imporant;
+}
 
+  /* .PRTxtFlex{
+   @apply w-auto h-10 flex flex-row justify-between items-center m-0
+  }
+  .SearchBarFlexPR
+  {
+    @apply flex flex-row w-56 h-8 justify-start items-center gap-1	border-2
+     border-inherit bg-white p-2
+  }
+  .ImgSearchIcon {
+    @apply w-40 h-4
+  }
+  .SearchBarTxt{
+    @apply flex-1 text-slate-300 font-mono text-base  not-italic font-normal
+  }
+  .TopProjectResourceTxt{
+    @apply text-black  font-sans	text-base not-italic font-semibold
+  }
+  .PRMonthlyText{
+    @apply flex px-2 py-3 justify-center items-center gap-3  self-stretch
+      bg-slate-100 text-slate-400 font-mono text-sm  font-medium w-32  h-8
+  }
+  .PRSearchFlexLeft{
+    @apply flex flex-row  justify-end items-center gap-3
+  }
+  .PRGraphUpperTxt{
+    @apply text-slate-400  font-sans text-xs font-normal not-italic  flex  justify-start
+     items-center
+  } */
