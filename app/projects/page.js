@@ -1,9 +1,12 @@
 import React from 'react'
 import ProjectLayout from './projectLayout'
-
+import allProjects from '@/Components/Projects/allProject'
 const page = () => {
     return (
-        <ProjectLayout />
+        <>
+            <allProjects />
+            <ProjectLayout />
+        </>
     )
 }
 

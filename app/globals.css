@@ -35,3 +35,93 @@ svg.recharts-surface{
     @apply text-slate-400  font-sans text-xs font-normal not-italic  flex  justify-start
      items-center
   } */
+  @layer components {
+    /* Project Form */
+.AddProjectHeadFlex{
+  @apply  flex flex-row w-[1218] h-14 px-3 py-6 justify-between items-center bg-white
+ mb-4}
+.PFAddNewPrj{
+  @apply text-black font-sans text-xl font-semibold not-italic leading-7 w-40  flex items-center  gap-1 h-10
+}
+
+.PFAllPrj{
+  @apply flex flex-row items-center justify-center bg-white border rounded-sm shadow-sm border-slate-200   w-28 h-8 px-1 py-4 flex-shrink-0 text-black font-sans  text-sm font-normal leading-snug gap-2
+}
+
+.DownArrowPR{
+  @apply w-2 h-3
+}
+
+.ProjectFormFlexingHeroSec{
+  @apply  flex flex-col items-center flex-shrink-0 justify-between bg-white w-auto py-1  h-auto
+}
+
+.ProjectFormFlex{
+  @apply  flex flex-col px-6 items-center justify-center
+}
+
+.PFDetailsList{
+  @apply text-black  text-left font-sans text-base font-normal not-italic leading-6 w-40 h-6 }
+
+.inputSpaceForm{
+   @apply text-slate-500 font-sans text-sm font-normal not-italic leading-6 pb-1 self-stretch items-center flex-1 border rounded-sm border-slate-200 bg-slate-100 shadow px-1 py-1 h-8 w-96 m-1
+}
+
+.inputSpaceFormAddResouces{
+   @apply text-slate-500 font-sans text-sm font-normal not-italic leading-6  self-stretch items-center flex-1 border  rounded-sm  border-slate-200 bg-slate-100 shadow px-1 py-1 h-20 w-96 m-1
+}
+
+.ProjectFormBtnNxt{
+  @apply px-1 py-1 justify-center items-center rounded-sm border border-blue-500 bg-blue-500 shadow-sm w-16 h-8 font-sans text-center text-white text-sm font-normal not-italic leading-3 flex-row-reverse
+}
+
+.ProjectFormSectioAdj{
+@apply flex flex-row items-center justify-between
+}
+/* Project Form */
+
+
+/* Projects Stages */
+.ProjectStagesBar{
+  @apply text-black font-sans text-base  not-italic font-semibold leading-7 bg-white w-auto h-12 flex justify-between items-center  px-4 py-6 flex-shrink-0
+}
+
+.LeftStagesSection{
+  @apply h-[626] w-[677px] flex flex-col items-center justify-center flex-shrink-0 self-stretch rounded-sm bg-white  gap-1 border border-slate-200
+}
+.RightStagesSection{
+  @apply  rounded-sm bg-white  gap-1 border border-slate-200
+}
+
+.LeftSectionStagesStage1{
+  @apply flex flex-col justify-center items-center w-[612px] h-[133px] gap-2 border border-slate-100 border-t-2
+}
+
+.AddSatge1Txt{
+  @apply text-blue-500 font-sans text-sm  not-italic font-bold leading-6 w-auto h-6 bg-white flex px-4 py-6 flex-col items-start self-stretch shadow-sm  justify-center border-b-4  border-slate-100
+}
+
+.Satge1Txt{
+  @apply text-blue-500 font-sans text-sm not-italic font-normal leading-7 px-2 w-[602px] h-[22] border-slate-500 rounded-sm   bg-white
+}
+
+.RequirementStages{
+  @apply text-pink-500  font-sans text-sm font-normal leading-6 flex-1 w-[612px] h-6 flex px-[9px] py-3 items-center gap-1  rounded-sm bg-white border border-slate-50
+}
+
+ .AddStages{
+  @apply text-black font-sans text-sm font-normal not-italic leading-6 w-auto h-8 flex px-6 py-3 items-center gap-1  rounded-sm  border border-slate-100 bg-white
+}
+
+ .AddCheckListStages{
+  @apply text-black font-sans text-sm font-normal not-italic leading-6 w-auto h-10 flex px-10 py-3 items-center gap-1  rounded-sm  bg-white border border-slate-100
+ }
+
+
+
+ .AddStagsCol{
+  @apply text-blue-500 font-sans text-sm not-italic font-normal leading-6 flex  pl-4 items-center gap-1 self-stretch p-3
+ }
+/* Projects Stages */
+
+  }

@@ -11,7 +11,7 @@ const Resources = () => {
             <div style={{ background: '#FFF', padding: '25px' }}>
                 <Row gutter={16}>
                     <div className="flex flex-row justify-between items-center w-full">
-                        <Title level={2}>Project Lists</Title>
+                        <Title level={2}>Project Resources Lists</Title>
                         <Radio.Group value={size} onChange={(e) => setSize(e.target.value)}>
                             <Radio.Button value="All Projects">All</Radio.Button>
                             <Radio.Button value="In Progress">Inprogress</Radio.Button>

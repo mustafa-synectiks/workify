@@ -30,8 +30,8 @@ import StackedBarChart from '@/components/Charts/StackedBarChart';
 import Resources from '@/Components/Resources/Resources';
 import Navbar from '@/Components/Navbar/Navbar';
 import Sidebar from '@/Components/Sidebar/Sidebar';
-import projectLayout from '@/app/projects/page'
-
+// import projectLayout from '@/app/projects/page'
+import ProjectsList from '@/Components/Projectslists/Projectslist'
 
 const { Sider, Content } = Layout;
 
@@ -328,8 +328,10 @@ const MainLayout = () => {
                 <StackedBarChart data={stackedBarChartData} />
               </div>
             </div>
+            <div className='my-5'>
+              <ProjectsList/>
+            </div>
             <div>
-              <Resources />
               <Resources />
             </div>
             <projectLayout/>
