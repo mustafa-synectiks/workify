@@ -19,12 +19,12 @@ const Resources = () => {
                         </Radio.Group>
                     </div>
                 </Row>
-                <Row gutter={16}>
+                <Row gutter={16} className='gap-6 mt-6'>
 
-
-                    <Col span={6} >
-                        <Card className='shadow-xl w-full'
+                    <Col span={5} style={{ boxShadow: "0px 0px 5px 1px rgba(0 , 0, 0, 0.2)", borderRadius: '5px' }}>
+                        <Card className='w-full flex justify-center'
                             bordered={false}
+
                         > <Title level={3}>Procurement</Title>
                             <Meta
                                 avatar={<Avatar src="https://xsgames.co/randomusers/avatar.php?g=pixel" />}
@@ -91,8 +91,8 @@ const Resources = () => {
 
                         </Card>
                     </Col>
-                    <Col span={6} >
-                        <Card className='shadow-xl w-full'
+                    <Col span={5} style={{ boxShadow: "0px 0px 5px 1px rgba(0 , 0, 0, 0.2)", borderRadius: '5px' }}>
+                        <Card className='w-full flex justify-center'
                             bordered={false}
                         > <Title level={3}>HRMS</Title>
                             <Meta
@@ -160,8 +160,8 @@ const Resources = () => {
 
                         </Card>
                     </Col>
-                    <Col span={6} >
-                        <Card className='shadow-xl w-full'
+                    <Col span={5} style={{ boxShadow: "0px 0px 5px 1px rgba(0 , 0, 0, 0.2)", borderRadius: '5px' }}>
+                        <Card className='w-full flex justify-center'
                             bordered={false}
                         > <Title level={3}>App Kube</Title>
                             <Meta
@@ -229,8 +229,8 @@ const Resources = () => {
 
                         </Card>
                     </Col>
-                    <Col span={6} >
-                        <Card className='shadow-xl w-full'
+                    <Col span={5} style={{ boxShadow: "0px 0px 5px 1px rgba(0 , 0, 0, 0.2)", borderRadius: '5px' }}>
+                        <Card className='w-full flex justify-center'
                             bordered={false}
                         >
                             <Title level={3}>Xformation</Title>

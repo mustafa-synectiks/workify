@@ -17,7 +17,7 @@ const ProjectsList = () => {
             <Row gutter={16}>
 
 
-                <Col span={6} >
+                <Col span={4} >
                     <Card className='shadow-md w-full'
                         bordered={false}
                     > <Title level={3}>Procurement</Title>
@@ -86,7 +86,7 @@ const ProjectsList = () => {
 
                     </Card>
                 </Col>
-                <Col span={6} >
+                <Col span={4} >
                     <Card className='shadow-md w-full'
                         bordered={false}
                     > <Title level={3}>HRMS</Title>
@@ -155,7 +155,7 @@ const ProjectsList = () => {
 
                     </Card>
                 </Col>
-                <Col span={6} >
+                <Col span={4} >
                     <Card className='shadow-md w-full'
                         bordered={false}
                     > <Title level={3}>App Kube</Title>
@@ -224,7 +224,7 @@ const ProjectsList = () => {
 
                     </Card>
                 </Col>
-                <Col span={6} >
+                <Col span={4} >
                     <Card className='shadow-md w-full'
                         bordered={false}
                     >
@@ -313,53 +313,53 @@ const ProjectsList = () => {
                     </div>
 
                 </Row>
-                <Row gutter={16}>
-                    <Col span={6} >
-                        <Card className='shadow-md w-full'
+                <Row gutter={16} className='gap-6 mt-4' >
+                    <Col span={5} style={{ boxShadow: "0px 0px 5px 1px rgba(0 , 0, 0, 0.2)", borderRadius: '5px' }}>
+                        <Card className='w-full flex justify-center'
                             bordered={false}
                         >
                             <Title level={3}>Procurement</Title>
                             <Button className='bg-orange-300'>In Progress</Button>
                             <Title level={5}>Total Usecase - 30 </Title>
                             <Paragraph>Due Date 12/09/2023</Paragraph>
-                            <Progress type="circle" percent={75} strokeWidth={12} />
-                            <Title level={4} className='mt-2 mx-auto'>Completed</Title>
+                            <Progress type="circle" percent={44} strokeWidth={16} strokeLinecap='square' strokeColor="#F8D236" trailColor='#F6EEFF' />
+                            <Title level={4} className='mt-2 mx-auto'>Task Completed</Title>
                         </Card>
                     </Col>
-                    <Col span={6} >
-                        <Card className='shadow-md w-full'
+                    <Col span={5} style={{ boxShadow: "0px 0px 5px 1px rgba(0 , 0, 0, 0.2)", borderRadius: '5px' }}>
+                        <Card className='w-full flex justify-center'
                             bordered={false}
                         >
                             <Title level={3}>HRMS</Title>
                             <Button className='bg-orange-300'>In Progress</Button>
                             <Title level={5}>Total Usecase - 30 </Title>
                             <Paragraph>Due Date 12/09/2023</Paragraph>
-                            <Progress type="circle" percent={88} strokeWidth={12} />
-                            <Title level={4} className='mt-2 mx-auto'>Completed</Title>
+                            <Progress type="circle" percent={88} strokeWidth={16} strokeLinecap='square' trailColor='#F6EEFF' strokeColor="#4CCA72" />
+                            <Title level={4} className='mt-2 mx-auto'>Task Completed</Title>
                         </Card>
                     </Col>
-                    <Col span={6} >
-                        <Card className='shadow-md w-full'
+                    <Col span={5} style={{ boxShadow: "0px 0px 5px 1px rgba(0 , 0, 0, 0.2)", borderRadius: '5px' }}>
+                        <Card className='w-full flex justify-center'
                             bordered={false}
                         >
                             <Title level={3}>App Kube</Title>
                             <Button className='bg-orange-300'>In Progress</Button>
                             <Title level={5}>Total Usecase - 30 </Title>
                             <Paragraph>Due Date 12/09/2023</Paragraph>
-                            <Progress type="circle" strokeWidth={12} percent={62} />
-                            <Title level={4} className='mt-2 mx-auto'>Completed</Title>
+                            <Progress type="circle" percent={62} strokeWidth={16} strokeLinecap='square' trailColor='#F6EEFF' />
+                            <Title level={4} className='mt-2 mx-auto'>Task Completed</Title>
                         </Card>
                     </Col>
-                    <Col span={6} >
-                        <Card className='shadow-md w-full'
+                    <Col span={5} style={{ boxShadow: "0px 0px 5px 1px rgba(0 , 0, 0, 0.2)", borderRadius: '5px' }}>
+                        <Card className='w-full flex justify-center'
                             bordered={false}
                         >
                             <Title level={3}>Xformation</Title>
                             <Button className='bg-orange-300'>In Progress</Button>
                             <Title level={5}>Total Usecase - 30 </Title>
                             <Paragraph>Due Date 12/09/2023</Paragraph>
-                            <Progress type="circle" percent={95} strokeWidth={12} />
-                            <Title level={4} className='mt-2 mx-auto'>Completed</Title>
+                            <Progress type="circle" percent={85} strokeWidth={16} strokeLinecap='square' trailColor='#F6EEFF' strokeColor="#4CCA72" />
+                            <Title level={4} className='mt-2 mx-auto'>Task Completed</Title>
                         </Card>
                     </Col>
 
