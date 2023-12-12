@@ -1,13 +1,6 @@
 'use client';
 import React, { useState } from 'react';
 import {
-  CaretUpFilled,
-  MenuFoldOutlined,
-  MenuUnfoldOutlined,
-  UploadOutlined,
-  UserOutlined,
-  CaretLeftFilled,
-  CaretRightFilled,
   AccountBookFilled,
   BellFilled,
   ProjectFilled,
@@ -17,20 +10,13 @@ import {
   VideoCameraOutlined,
   RightOutlined,
   LeftOutlined,
-  QuestionCircleOutlined,
-  BellOutlined,
 } from '@ant-design/icons';
-import TabsComponent from '@/Components/Tabs/Tabs';
 import { Layout, Menu, Button, theme, Card, Avatar, Badge, Input, Divider } from 'antd';
-import CircularProgress from '@/Components/Charts/Circular';
-import axios from 'axios';
 import Cards from '@/Components/Cards/Cards';
 import Barchart from '@/Components/Charts/Barchart';
-import StackedBarChart from '@/components/Charts/StackedBarChart';
+import StackedBarChart from '@/Components/Charts/StackedBarChart';
 import Resources from '@/Components/Resources/Resources';
 import Navbar from '@/Components/Navbar/Navbar';
-import Sidebar from '@/Components/Sidebar/Sidebar';
-// import projectLayout from '@/app/projects/page'
 import ProjectsList from '@/Components/Projectslists/Projectslist'
 
 const { Sider, Content } = Layout;
@@ -70,42 +56,6 @@ const MainLayout = () => {
     isCompleted: true,
   };
   const cardData4 = {
-    title: 'Unassign Projects',
-    numberOfProjects: 44,
-    // imageUrl: 'https://placekitten.com/800/400', // Replace with your image URL
-    totalTask: 66,
-    progressPercentage: 85,
-    progress: 89,
-    isCompleted: true,
-  };
-  const cardData5 = {
-    title: 'Procurements',
-    numberOfProjects: 13,
-    // imageUrl: 'https://placekitten.com/800/400', // Replace with your image URL
-    totalTask: 5,
-    progressPercentage: 15,
-    progress: 75,
-    isCompleted: true,
-  };
-  const cardData6 = {
-    title: 'Completed Projects',
-    numberOfProjects: 33,
-    // imageUrl: 'https://placekitten.com/800/400', // Replace with your image URL
-    totalTask: 15,
-    progressPercentage: 15,
-    progress: 75,
-    isCompleted: true,
-  };
-  const cardData7 = {
-    title: 'Inprogress Projects',
-    numberOfProjects: 25,
-    // imageUrl: 'https://placekitten.com/800/400', // Replace with your image URL
-    totalTask: 35,
-    progressPercentage: 55,
-    progress: 35,
-    isCompleted: true,
-  };
-  const cardData8 = {
     title: 'Unassign Projects',
     numberOfProjects: 44,
     // imageUrl: 'https://placekitten.com/800/400', // Replace with your image URL
@@ -185,10 +135,10 @@ const MainLayout = () => {
           <Content style={{ margin: '18px 16px', padding: '0px 10px', minHeight: 280 }}>
             <h1 className='ml-2 uppercase text-3xl'>workflow Management</h1>
             <div className="flex flex-row gap-9 w-full">
-              <Cards {...cardData1} />
-              <Cards {...cardData2} />
+              <Cards />
+              {/* <Cards {...cardData2} />
               <Cards {...cardData3} />
-              <Cards {...cardData4} />
+              <Cards {...cardData4} /> */}
             </div>
             <div className="flex flex-col space-y-6">
               <div className="bg-white my-6 p-10">

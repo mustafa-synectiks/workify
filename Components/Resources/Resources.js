@@ -1,6 +1,6 @@
 import { React, useState } from 'react';
 import { Avatar, Card, Col, Row, Typography, Tooltip, Button, Divider, Flex, Radio } from 'antd';
-import { AntDesignOutlined, UserOutlined, EditOutlined, EllipsisOutlined, SettingOutlined } from '@ant-design/icons';
+import { AntDesignOutlined, UserOutlined,} from '@ant-design/icons';
 const { Title, Paragraph, Text } = Typography;
 const { Meta } = Card;
 

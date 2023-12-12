@@ -1,100 +1,60 @@
-// import React from 'react'
-// import { Card, Progress } from 'antd';
-// import {
-//   CaretUpFilled,
-// } from '@ant-design/icons';
+import { React, useState } from 'react';
+import { Avatar, Card, Col, Row, Typography, Tooltip, Button, Progress, Radio } from 'antd';
+import { AntDesignOutlined, UserOutlined, EditOutlined, EllipsisOutlined, SettingOutlined } from '@ant-design/icons';
+const { Title, Paragraph, Text } = Typography;
+const { Meta } = Card;
 
-// const Cards = (props) => {
-//   return (
-//     <>
-//       <Card>
-//         <div className="flex flex-row">
-//           <h6>{props.title}</h6>
-//           <img src={props.img} alt="" />
-//         </div>
-//         <span>{props.projectcount}</span>
-//         <p>{props.Progress}</p>
-//         {/* <Progress percent={12} /> */}
-//         <p>{props.totalTask}</p>
-//       </Card>
-//     </>
-//   )
-// }
-
-// export default Cards
-
-// components/ReusableCard.js
-
-import { Card, Progress,Row } from 'antd';
-import {
-  CaretDownFilled,
-  CaretUpFilled,
-  CheckCircleOutlined,
-  CheckCircleFilled
-} from '@ant-design/icons';
-const Cards = ({ title, progressPercentage, numberOfProjects, totalTask, imageUrl, isCompleted, progress }) => {
-  const getProgressColor = () => {
-    if (progress >= 75) {
-      return 'green';
-    } else if (progress >= 25) {
-      return 'orange';
-    } else {
-      return 'red';
-    }
-  };
+const DashCards = () => {
+  const [size, setSize] = useState('large');
   return (
     <>
+        <Row gutter={16} className='gap-6 mt-4 w-full' >
 
-        <Card bordered={false} className='w-full ml-3'
-        // cover={imageUrl && <img alt={title} src={imageUrl} />}
-        // actions={[
-        //   isCompleted ? (
-        //     <CheckCircleOutlined
-        //       key="completed" style={{ color: '#faad14' }} />
-        //   ) : (
-        //     <CheckCircleFilled key="in-progress" style={{ color: '#52c41a' }} />
-        //   ),
-        // ]}
-        >
-          {/* <Card.Meta title={title} description={progressPercentage} /> */}
-          <h3 className="text-2xl">{`${title}`}</h3>
-          <h2 className="text-3xl">{`${progressPercentage}`}</h2>
-          <div className="project-details">
-            <p>{`${numberOfProjects} projects`}</p>
-            <Progress percent={progress} status={isCompleted ? 'success' : 'active'} />
-            <p>{`Total Task ${totalTask}`}</p>
-          </div>
-        </Card>
-        {/* <div className="card w-full">
-      {/* {imageUrl && <img src={imageUrl} alt={title} className="card-image" />
-      <div className="card-content p-4 ">
-        <div className="flex flex-row items-center justify-between">
-          <h2 className="text-2xl font-semibold text-gray-500">{title}</h2>
+          <Col span={5} style={{ boxShadow: "0px 0px 5px 1px rgba(0 , 0, 0, 0.2)", borderRadius: '5px' }}>
+            <Card className='w-full'
+              bordered={false}>
+              <Title level={4}>Total Projects </Title>
+              <Title level={2}>10</Title>
+              <Title level={5}>progress 12%</Title>
+              <Progress type="line" percent={44} strokeWidth={16} strokeLinecap='square' strokeColor="#F8D236" trailColor='#F6EEFF' />
+              <Paragraph>Total Task 120</Paragraph>
+            </Card>
+          </Col>
 
-        </div>
-        {/* <p>{`${projectCount} projects`}</p>
-        <p className="text-4xl font-semibold text-black">{numberOfProjects}</p>
-        <div className='flex flex-row items-en'>
-          <p className="text-black flex flex-row items-center w-auto">{`Progress ${progressPercentage}%`}
-            <span className="icons flex mt-2 ml-2">
-              {progress ? (
-                <CaretUpFilled className={`text-xl icon text-${getProgressColor()}-500`} />
-              ) : (
-                <CaretDownFilled className={`text-xl icon text-${getProgressColor()}-500`} />
-              )}
-            </span>
+          <Col span={5} style={{ boxShadow: "0px 0px 5px 1px rgba(0 , 0, 0, 0.2)", borderRadius: '5px' }}>
+            <Card className='w-full'
+              bordered={false}>
+              <Title level={4}>Completed Projects </Title>
+              <Title level={2}>04</Title>
+            <Progress type="line" percent={88} strokeWidth={16} strokeLinecap='square' strokeColor="#52C41A" trailColor='#F6EEFF' />
+              <Paragraph>Completed Before 05 Days</Paragraph>
+            </Card>
+          </Col>
 
-          </p>
-        </div>
+          <Col span={5} style={{ boxShadow: "0px 0px 5px 1px rgba(0 , 0, 0, 0.2)", borderRadius: '5px' }}>
+            <Card className='w-full'
+              bordered={false}>
+              <Title level={4}>Inprogress Projects </Title>
+              <Title level={2}>05</Title>
+              <Progress type="line" percent={44} strokeWidth={16} strokeLinecap='square' strokeColor="#F8D236" trailColor='#F6EEFF' />
+              <Paragraph>View Details</Paragraph>
+            </Card>
+          </Col>
 
-        <div className="project-details flex flex-col mt-4">
-          <Progress percent={progress} />
-          <p>{`${totalTask} Tasks`}</p>
-        </div>
-      </div>
-    </div> */} 
+          <Col span={5} style={{ boxShadow: "0px 0px 5px 1px rgba(0 , 0, 0, 0.2)", borderRadius: '5px' }}>
+            <Card className='w-full'
+              bordered={false}>
+              <Title level={4}>Unassign Projects </Title>
+              <Title level={2}>01</Title>
+            <Progress type="line" percent={30} strokeWidth={16} strokeLinecap='square' strokeColor="#FF4D4F" trailColor='#F6EEFF' />
+              <Paragraph>view Details</Paragraph>
+            </Card>
+          </Col>
+
+
+        </Row>
     </>
-  );
+  )
 };
+export default DashCards;
 
-export default Cards;
